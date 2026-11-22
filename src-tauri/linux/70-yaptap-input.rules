@@ -1,0 +1,5 @@
+# Lets the logged-in user's YapTap read the keyboard for the dictation shortcut
+# (and re-inject keys so the shortcut doesn't reach other apps).
+# uaccess rules must sort before 73-seat-late.rules.
+KERNEL=="uinput", TAG+="uaccess"
+SUBSYSTEM=="input", KERNEL=="event*", TAG+="uaccess"

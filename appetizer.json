@@ -1,0 +1,15 @@
+{
+  "name": "YapTap",
+  "tagline": "Hold a key, talk, let go. Fully local dictation.",
+  "description": "Free, open-source dictation that runs entirely on your computer. Hold a key, speak, and clean text appears wherever your cursor is. Speech recognition runs locally with NVIDIA Parakeet or OpenAI Whisper: no cloud, no account, no word limits.",
+  "category": "Productivity",
+  "icon": "build/icon.png",
+  "accent": "#7B61FF",
+  "highlights": [
+    "Hold or tap to dictate in any app",
+    "100% local, works offline",
+    "English, German and 23+ more languages",
+    "Dictionary, replacements and history"
+  ],
+  "platforms": ["macos", "windows", "linux"]
+}

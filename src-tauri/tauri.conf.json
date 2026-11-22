@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "YapTap",
+  "version": "0.1.0",
+  "identifier": "app.yaptap",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://localhost:1438",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "macOSPrivateApi": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "YapTap",
+        "url": "index.html#settings",
+        "width": 860,
+        "height": 600,
+        "minWidth": 720,
+        "minHeight": 520,
+        "visible": false,
+        "titleBarStyle": "Overlay",
+        "hiddenTitle": true,
+        "trafficLightPosition": { "x": 18, "y": 22 }
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; connect-src 'self' ipc: http://ipc.localhost"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "category": "Productivity",
+    "shortDescription": "Free, open-source, fully local dictation",
+    "longDescription": "Hold a key, talk, let go. YapTap turns your voice into text right where your cursor is. Speech recognition runs on your computer: no cloud, no account, no word limits.",
+    "copyright": "MIT License",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "macOS": {
+      "minimumSystemVersion": "13.0",
+      "entitlements": "Entitlements.plist",
+      "infoPlist": "Info.plist",
+      "hardenedRuntime": true
+    },
+    "linux": {
+      "deb": { "files": { "/usr/lib/udev/rules.d/70-yaptap-input.rules": "linux/70-yaptap-input.rules" } },
+      "rpm": { "files": { "/usr/lib/udev/rules.d/70-yaptap-input.rules": "linux/70-yaptap-input.rules" } }
+    }
+  }
+}

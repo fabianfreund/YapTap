@@ -1,0 +1,16 @@
+node_modules
+dist
+src-tauri/target
+src-tauri/gen
+.DS_Store
+*.log
+*.tsbuildinfo
+
+# Signing material: never commit
+*.key
+*.key.pub
+*.p8
+*.p12
+*.pem
+*.cer
+.env*
